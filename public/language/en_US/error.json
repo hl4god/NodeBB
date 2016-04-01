@@ -12,6 +12,7 @@
     "invalid-title": "Invalid title!",
     "invalid-user-data": "Invalid User Data",
     "invalid-password": "Invalid Password",
+    "invalid-phone-num":"Invalid Phone Number",
     "invalid-username-or-password": "Please specify both a username and password",
     "invalid-search-term": "Invalid search term",
     "invalid-pagination-value": "Invalid pagination value, must be at least %1 and at most %2",

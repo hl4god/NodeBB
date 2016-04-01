@@ -53,6 +53,8 @@
     "change_password_success": "您的密码已更新！",
     "confirm_password": "确认密码",
     "password": "密码",
+    "code":"验证码",
+    "password_code":"密码/验证码",
     "username_taken_workaround": "您申请的用户名已被占用，所以我们稍作更改。您现在的用户名是 <strong>%1</strong>",
     "password_same_as_username": "您的密码与用户名相同，请选择另外的密码。",
     "password_same_as_email": "Your password is the same as your email, please select another password.",

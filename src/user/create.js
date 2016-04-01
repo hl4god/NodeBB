@@ -27,6 +27,7 @@ module.exports = function(User) {
 
 			var userData = {
 				'username': data.username,
+				'phone':data.phone||'',
 				'userslug': data.userslug,
 				'email': data.email,
 				'joindate': timestamp,
@@ -87,6 +88,13 @@ module.exports = function(User) {
 							},
 							function(next) {
 								db.sortedSetAdd('userslug:uid', userData.uid, userData.userslug, next);
+							},
+							function (next) { //添加手机号和uid对应关系
+								if(userData.phone && /(13|14|15|17|18)[0-9]{9}]/.test(userData.phone)){
+									db.sortedSetAdd('phone:uid', userData.uid, userData.phone, next);
+								}else{
+									next();
+								}
 							},
 							function(next) {
 								var sets = ['users:joindate', 'users:online'];

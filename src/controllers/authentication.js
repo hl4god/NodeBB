@@ -122,8 +122,8 @@ authenticationController.login = function(req, res, next) {
 	}
 
 	var loginWith = meta.config.allowLoginWith || 'username-email';
-
-	if (req.body.username && utils.isEmailValid(req.body.username) && loginWith.indexOf('email') !== -1) {
+	//使用手机号登录
+	if (req.body.username && utils.isEmailValid(req.body.username) && loginWith.indexOf('email') !== -1) {//email
 		user.getUsernameByEmail(req.body.username, function(err, username) {
 			if (err) {
 				return next(err);
@@ -131,7 +131,7 @@ authenticationController.login = function(req, res, next) {
 			req.body.username = username ? username : req.body.username;
 			continueLogin(req, res, next);
 		});
-	} else if (loginWith.indexOf('username') !== -1 && !validator.isEmail(req.body.username)) {
+	} else if (loginWith.indexOf('username') !== -1 && !validator.isEmail(req.body.username)) {//用户名
 		continueLogin(req, res, next);
 	} else {
 		res.status(500).send('[[error:wrong-login-type-' + loginWith + ']]');

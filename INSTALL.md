@@ -46,8 +46,8 @@ Successfully added user: { "user" : "nodebb", "roles" : [ "readWrite" ] }
 ```
 
 按步骤设置相关参数
-
-访问控制台输出的网址,加入/admin ,登陆后台,注意设置修改以下内容:
+* 手动修改config.json 文件,添加site ,reqSmsUrl ,signinUrl ,const_pwd等参数
+* 访问控制台输出的网址,加入/admin ,登陆后台,注意设置修改以下内容:
 * 设置语言为简体中文  General => Languages => Language Setting
 * 手动设置板块名字以及说明 翻译为中文  Manage => Categories
 * 设置网站标题 说明 图标等  Settings => General
