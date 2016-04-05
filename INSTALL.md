@@ -54,6 +54,7 @@ Successfully added user: { "user" : "nodebb", "roles" : [ "readWrite" ] }
 * 设置修改页脚HTML  Extend => Widgets => Global Footer
 * 发表帖子奖励规则策略等设置  Extend => Rewards
 * 隐藏注册按钮 Settings =>Users => Authentication =>Registration Type   修改为No Registration
+* 设置用户Session保存时间 Settings => Users =>Account Protection =>Days to remember user login sessions =>30
 
 5.后期可能工作(二次开发)
 * 添加分享组件  General => Social 可以考虑直接引入第三方分享组件 或搜索NodeBB社交分享插件
