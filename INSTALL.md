@@ -49,7 +49,7 @@ Successfully added user: { "user" : "nodebb", "roles" : [ "readWrite" ] }
 * 手动修改config.json 文件,添加site ,reqSmsUrl ,signinUrl ,const_pwd等参数
 * 访问控制台输出的网址,加入/admin ,登陆后台,注意设置修改以下内容:
 * 设置语言为简体中文  General => Languages => Language Setting
-* 手动设置板块名字以及说明 翻译为中文  Manage => Categories
+* 手动设置板块名字图标以及说明 翻译为中文  Manage => Categories
 * 设置网站标题 说明 图标等  Settings => General
 * 设置修改页脚HTML  Extend => Widgets => Global Footer
 * 发表帖子奖励规则策略等设置  Extend => Rewards
