@@ -60,10 +60,18 @@ Successfully added user: { "user" : "nodebb", "roles" : [ "readWrite" ] }
 * 设置Head Navigation Background Image,Apperence => Custome HTML & CSS
 
 ````
+/**设置导航条背景和高度*/
 body > main> nav{
     background-image: url('/images/community-banner@2x.png');
     background-size: contain;
     height: 100px;
+}
+````
+
+````
+/**设置发表主题时话题框大小*/
+div.tags-container > div.bootstrap-tagsinput > input.ui-autocomplete-input {
+     width :300px;
 }
 ````
 
@@ -82,8 +90,9 @@ Enable Custome CSS
 
 
 2. 需要使用的第三方开发的插件
-    * node-plugin-question-and-answer
+    * nodebb-plugin-question-and-answer
     * nodebb-plugin-recent-cards
+    * nodebb-plugin-qn
 
 
 ## Reference
