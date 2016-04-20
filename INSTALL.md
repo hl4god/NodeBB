@@ -87,6 +87,7 @@ Enable Custome CSS
     * nodebb-plugin-essence  帖子加精
     * nodebb-theme-persona-v1 主题的登录页面修改
     * nodebb-plugin-freebacking 积分逻辑
+    * nodebb-plugin-recent-cards-free 去掉背景图
 
 
 2. 需要使用的第三方开发的插件

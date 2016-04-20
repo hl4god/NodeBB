@@ -1,6 +1,7 @@
 {
     "username-email": "Username / Email",
     "username": "Username",
+    "phone":"Phone Number",
     "email": "Email",
     "remember_me": "Remember Me?",
     "forgot_password": "Forgot Password?",

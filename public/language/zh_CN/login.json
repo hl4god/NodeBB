@@ -1,6 +1,7 @@
 {
     "username-email": "用户名/电子邮箱",
     "username": "用户名",
+    "phone":"手机号",
     "email": "邮件",
     "remember_me": "记住我？",
     "forgot_password": "忘记密码？",

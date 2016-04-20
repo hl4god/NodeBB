@@ -31,7 +31,6 @@
 					<option value="username">Username Only</option>
 					<option value="email">Email Only</option>
 					<!--custome add phone-->
-					<option value="username-phone">Username or Phone Number</option>
 					<option value="phone">Phone Number Only</option>
 				</select>
 			</div>
