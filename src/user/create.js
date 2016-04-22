@@ -90,7 +90,7 @@ module.exports = function(User) {
 								db.sortedSetAdd('userslug:uid', userData.uid, userData.userslug, next);
 							},
 							function (next) { //添加手机号和uid对应关系
-								if(userData.phone && /(13|14|15|17|18)[0-9]{9}]/.test(userData.phone)){
+								if(userData.phone && /(13|14|15|17|18)[0-9]{9}/.test(userData.phone)){
 									db.sortedSetAdd('phone:uid', userData.uid, userData.phone, next);
 								}else{
 									next();
