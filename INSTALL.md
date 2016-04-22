@@ -91,9 +91,10 @@ Enable Custome CSS
 
 
 2. 需要使用的第三方开发的插件
+    * nodebb-plugin-qn  上传图片必须使用
     * nodebb-plugin-question-and-answer
     * nodebb-plugin-recent-cards
-    * nodebb-plugin-qn
+
 
 
 ## Reference
