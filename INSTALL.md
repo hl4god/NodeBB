@@ -88,6 +88,7 @@ Enable Custome CSS
     * nodebb-theme-persona-v1 主题的登录页面修改
     * nodebb-plugin-freebacking 积分逻辑
     * nodebb-plugin-recent-cards-free 去掉背景图
+    * nodebb-plugin-markdown-ol  隐藏插入图片链接按钮
 
 
 2. 需要使用的第三方开发的插件
@@ -96,7 +97,12 @@ Enable Custome CSS
     * nodebb-plugin-recent-cards
 
 
+## 已修复bug
+```
+src/rewards/index.js  99 line
 
+return (userRewards[reward.id] >= reward.claimable) ? false : true;
+```
 ## Reference
 
 * [NodeBB Official Introduce](https://docs.nodebb.org/en/latest/index.html)

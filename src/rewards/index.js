@@ -7,9 +7,13 @@ var rewards = {},
 
 
 rewards.checkConditionAndRewardUser = function(uid, condition, method, callback) {
+	console.log("uid:",uid);
+	console.log("condition:",condition);
+	console.log("method:",method);
 	async.waterfall([
 		function(next) {
 			isConditionActive(condition, function(err, isActive) {
+				console.log("isActive:",isActive);
 				if (!isActive) {
 					return back(err);
 				}
@@ -23,9 +27,11 @@ rewards.checkConditionAndRewardUser = function(uid, condition, method, callback)
 			});
 		},
 		function(ids, next) {
+			console.log("ids:",ids);
 			getRewardDataByIDs(ids, next);
 		},
 		function(rewards, next) {
+			console.log("rewards:",rewards);
 			filterCompletedRewards(uid, rewards, function(err, filtered) {
 				if (!filtered || !filtered.length) {
 					return back(err);
@@ -90,7 +96,7 @@ function filterCompletedRewards(uid, rewards, callback) {
 				return true;
 			}
 
-			return (userRewards[reward.id] > reward.claimable) ? false : true;
+			return (userRewards[reward.id] >= reward.claimable) ? false : true;
 		});
 
 		callback(false, rewards);
@@ -120,6 +126,7 @@ function checkCondition(reward, method, callback) {
 function giveRewards(uid, rewards, callback) {
 	getRewardsByRewardData(rewards, function(err, rewardData) {
 		async.each(rewards, function(reward, next) {
+			console.log('action:rewards.award:' + reward.rid,{uid: uid, reward: rewardData[rewards.indexOf(reward)]});
 			plugins.fireHook('action:rewards.award:' + reward.rid, {uid: uid, reward: rewardData[rewards.indexOf(reward)]});
 			db.sortedSetIncrBy('uid:' + uid + ':rewards', 1, reward.id, next);
 		}, callback);
