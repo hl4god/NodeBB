@@ -184,7 +184,7 @@ var	async = require('async'),
 	};
 
 	User.getUidByPhone = function(phone, callback){ //用户通过手机号获取uid
-		if(!phone || !/(13|14|15｜17|18)[0-9]{9}/.test(phone)){
+		if(!phone || !/(13|14|15|17|18)[0-9]{9}/.test(phone)){
 			return callback("phone is not correct");
 		}//根据手机号获取uid
 		db.sortedSetScore('phone:uid', phone, callback);

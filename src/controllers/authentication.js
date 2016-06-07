@@ -175,7 +175,11 @@ function continueLogin(req, res, next) {
 				if (err) {
 					return res.status(403).send(err.message);
 				}
-
+				//个人添加
+				if(req.redirectTo){
+					res.redirect(nconf.get('relative_path') +req.redirectTo);
+					return;
+				}
 				if (!req.session.returnTo) {
 					res.status(200).send(nconf.get('relative_path') + '/');
 				} else {
