@@ -148,7 +148,9 @@ function continueLogin(req, res, next) {
 			if (typeof info === 'object') {
 				info = '[[error:invalid-username-or-password]]';
 			}
-
+			if(info === '/'){
+				return res.redirect(req.redirectTo);
+			}
 			return res.status(403).send(info);
 		}
 
